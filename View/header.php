@@ -17,7 +17,7 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../Public/index.php">Home</a>
+                <a class="navbar-brand" href="../View/index.php">Home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,8 +26,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Meu perfil</a>
                         </li>
+                        <!-- Verifica onde está pra direcionar corretamente-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Enviar Email</a>
+                            <a class="nav-link" href="
+                            <?php 
+                            if(getcwd()=='C:\xampp\htdocs\project_email\Public')
+                            {
+                                echo'../View/send_email.php';
+                            }else {
+                                echo'send.email.php';
+                            }
+                            ?>
+                            ">Enviar Email</a>
                         </li>
                     </ul>
                     <form class="d-flex">
