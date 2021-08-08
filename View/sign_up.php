@@ -14,7 +14,7 @@
             margin-top: 10%;
         }
 
-        .conteiner {
+        .container {
             background-color: white;
             width: 800px;
             margin-left: auto;
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <div class="conteiner">
+    <div class="container">
         <div class=" main center-block">
             <div class="center-block">
                 <div class="title">
