@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         .main {
-            width: 700px;
+            width: 800px;
             margin-left: auto;
             margin-right: auto;
             margin-top: 10%;
@@ -16,7 +16,7 @@
 
         .container {
             background-color: white;
-            width: 800px;
+            width: 900px;
             margin-left: auto;
             margin-right: auto;
             height: 300px;

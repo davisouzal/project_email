@@ -15,7 +15,7 @@ $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($data);
 
 //Tratamento de erros
-if (!empty($data['Sign_upUser'])) {
+if (!empty($data['sign_upUser'])) {
     $empty_input = false;
 
     $data = array_map('trim', $data);

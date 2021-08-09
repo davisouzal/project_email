@@ -42,9 +42,9 @@ if (!empty($data['Sign_upUser'])) {
         $row_idReciever = $idReciever->fetch(PDO::FETCH_ASSOC);
         $reciever_id = false;
         if($row_idReciever!= false and $row_idReciever!= null){
-            $reciever_id = extract($row_idReciever);
+            extract($row_idReciever);
+            $reciever_id = implode($row_idReciever);
         }
-
         if ($reciever_id != false AND $reciever_id != null) {
             //Query pra registrar o usuário na tabela do db
             $query_sendEmail = "INSERT INTO email (sender_id, reciever_id, title, content) VALUES (:sender_id, :reciever_id, :title, :content)";

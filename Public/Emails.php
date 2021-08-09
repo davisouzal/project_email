@@ -35,8 +35,8 @@ $result_emails->execute();
             <thead>
                 <tr class="table-dark">
                     <th scope="col">#</th>
-                    <th scope="col-xs-4">First</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col-xs-4">Emails</th>
+                    <th scope="col" >Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,13 +46,12 @@ $result_emails->execute();
                     //fetch_assoc pra imprimir através do nome da coluna 
                     while ($row_emails = $result_emails->fetch(PDO::FETCH_ASSOC)) {
                         extract($row_emails);
-                        $num = 1;
                         echo "
                     <tr class='table-dark'>
-                            <th> $num </th>
+                            <th> * </th>
                             <td> $title </td>
             
-                            <td> <a href='userView.php?user_id=$email_id'>Visualizar </a></td>
+                            <td> <a href='emailView.php?email_id=$email_id'>Visualizar</a> |  <a href='emailDelete.php?email_id=$email_id'>Excluir</a></td>
 
                   </tr>
                     ";
@@ -64,5 +63,4 @@ $result_emails->execute();
             </tbody>
         </table>
     </div>
-    <button type="button"></button>
 </div>

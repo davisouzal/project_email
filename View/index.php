@@ -1,3 +1,11 @@
+<?php
+session_start();
+ob_start();
+if (isset($_SESSION['msg'])) {
+  echo "<p class='mb-0'>" . $_SESSION['msg'] . "</p>";
+  unset($_SESSION['msg']);
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,7 +44,7 @@
     <div class=" main center-block">
       <div class="center-block">
         <h1>Tela de login</h1>
-        <form>
+        <form method="POST" name="sign_inUser" action="../Public/sign_in_action.php">
           <div class="mb-3 row">
             <label for="exampleInputEmail1" class="form-label">Endereço de Email</label>
             <input type="email" class="form-control" id="email_adress" name="email_adress" aria-describedby="emailHelp">
@@ -46,7 +54,7 @@
             <input type="password" class="form-control" id="password" name="password">
             <div id="emailHelp" class="form-text">Nunca pediremos sua senha por outro meio</div>
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary" name="sign_inUser" id="sign_inUser" value="Login">Login</button>
         </form>
       </div>
       <span>Não tem uma conta ainda? Clique <a href="./sign_up.php">aqui</a></span>
